@@ -36,9 +36,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationerrors = {};
-    if (!data.category === 1 || !data.category === 2 || !data.category === 3) {
-      validationerrors.category = "Select a category";
-    } else if (data.category === 0) {
+    if (data.category === 0) {
       validationerrors.category = "Select a category";
     }
     if (!data.email.trim()) {
