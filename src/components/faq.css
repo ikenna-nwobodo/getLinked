@@ -66,4 +66,7 @@
   .faqs-text .content p {
     font-size: 13px;
   }
+  .faq {
+    text-align: left;
+  }
 }

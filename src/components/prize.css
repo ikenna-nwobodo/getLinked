@@ -41,6 +41,10 @@
     display: grid;
     gap: 1.3rem;
   }
+  .prize-text {
+    justify-content: center;
+    align-items: center;
+  }
   .prize-text .title {
     gap: 0.5rem;
     display: grid;
@@ -51,7 +55,7 @@
     font-size: 4vw;
   }
   .prize-text .title p {
-    font-size: 2.5vw;
+    font-size: 13px;
     width: 80%;
   }
   .prize-img .prize-pic {

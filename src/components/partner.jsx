@@ -23,7 +23,7 @@ const Partners = () => {
       <img
         src={require("../images/Partner.png")}
         alt=""
-        height={width > breakpoint ? 400 : 170}
+        height={width > breakpoint ? 400 : 150}
       />
     </div>
   );

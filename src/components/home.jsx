@@ -31,7 +31,7 @@ const Home = () => {
               <div className="btm-text">
                 Hackathon <span>1.0</span>
                 <img src={require("../images/chain.png")} alt="" height={50} />
-                <img src={require("../images/bang.png")} alt="" height={40} />
+                <img src={require("../images/bang.png")} alt="" height={35} />
               </div>
             </h1>
             <p>

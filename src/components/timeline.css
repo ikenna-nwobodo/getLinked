@@ -22,7 +22,7 @@
   }
   .event-list {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.7rem;
   }
   .event {
     margin-left: 0.6rem;
@@ -34,6 +34,7 @@
   }
   .events p {
     text-align: left;
+    font-size: 13px;
   }
   .event-details {
     padding: 1rem;

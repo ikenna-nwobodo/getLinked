@@ -28,7 +28,7 @@ const Prizes = () => {
           <img
             src={require("../images/prizepic.png")}
             alt=""
-            height={width > breakpoint ? 400 : 200}
+            height={width > breakpoint ? 400 : 170}
           />
         </div>
         <div className="prize-rewards">

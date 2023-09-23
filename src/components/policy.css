@@ -26,7 +26,6 @@
 }
 .policy-text .title .head small {
   display: grey !important;
-  font-size: 1.8vw;
 }
 .policy-text .content {
   border: 1px solid #d434fe;
@@ -67,6 +66,9 @@
   width: 40%;
 }
 @media screen and (max-width: 900px) {
+  p {
+    font-size: 13px;
+  }
   .policy {
     width: 90%;
     height: max-content;
