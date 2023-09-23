@@ -1,0 +1,71 @@
+.footer {
+  background-color: #150e2889;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.footer-items {
+  width: 80%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 4fr 2fr 2fr;
+}
+.footer-items p {
+  font-size: 12px;
+}
+span {
+  color: #d434fe;
+}
+.about {
+  display: grid;
+  gap: 2rem;
+}
+.company {
+  display: grid;
+  gap: 0.6rem;
+}
+.pol {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.links .links-title {
+  color: #d434fe;
+  margin-bottom: 0.3rem;
+}
+.links {
+  display: grid;
+  gap: 0.6rem;
+}
+.links .socials {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.links .socials small {
+  color: #d434fe;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact .contact-title {
+  color: #d434fe;
+}
+.con-links {
+  display: grid;
+  gap: 0.5rem;
+}
+.con-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+@media screen and (max-width: 900px) {
+  .footer-items {
+    grid-template-columns: none;
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --max-height: inherit;
+}
+.criteria {
+  width: 80%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  place-items: center;
+}
+.criteria-img {
+  padding: 1rem;
+}
+.criteria-text {
+  display: grid;
+  gap: 2rem;
+}
+.title h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.title span {
+  color: #d434fe;
+}
+.content {
+  line-height: 1.8rem;
+}
+.attributes {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.attr {
+  font-size: 13px;
+}
+.attr span {
+  color: #d434fe;
+  font-weight: bold;
+}
+@media screen and (max-width: 900px) {
+  .criteria {
+    height: calc(var(--max-height) + 3vh);
+    width: 90%;
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .criteria-img {
+    padding: 0rem;
+  }
+  .criteria-text {
+    text-align: center;
+  }
+  .criteria-text .title h1 {
+    font-size: 4vw;
+  }
+  .criteria-text .content {
+    display: grid;
+    place-items: center;
+  }
+}

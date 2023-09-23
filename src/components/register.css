@@ -1,0 +1,130 @@
+.ctx {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.reg-page {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+  padding: 2rem;
+}
+.reg-info {
+  display: grid;
+  place-items: center;
+}
+.reg-form {
+  padding: 3rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  display: grid;
+  place-items: center;
+}
+.reg-form .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.reg-form .form p {
+  font-size: 12px;
+}
+.reg-form .form small {
+  font-size: 12px;
+}
+.frrr {
+  display: grid;
+  gap: 1rem;
+}
+.frm {
+  display: flex;
+  gap: 1rem;
+}
+.frm .form-input {
+  display: grid;
+  width: 100%;
+  gap: 0.3rem;
+}
+.frm .form-input label {
+  font-size: 12px;
+}
+.frm .form-input input,
+select {
+  padding: 0.7rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  resize: none;
+  background-color: transparent;
+  color: white;
+}
+.frm .form-input input[type="number"] {
+  overflow: hidden;
+}
+.frm .form-input option {
+  background-color: #150e28;
+}
+.rvw {
+  font-size: 12px;
+  font-style: italic;
+}
+.chkbx {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.775);
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(4.6px);
+  overflow: hidden;
+}
+.modal-content {
+  border: 1px solid #d434fe;
+  width: 60%;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+.modal-content p,
+.modal-content h2 {
+  width: auto;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .reg-page {
+    grid-template-columns: none;
+    width: 90%;
+  }
+  .reg-form {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .form h2 {
+    display: none;
+  }
+  .frm {
+    display: grid;
+  }
+  .frm.last {
+    display: flex;
+  }
+}

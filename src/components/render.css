@@ -1,0 +1,12 @@
+.render {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+@media screen and (max-width: 1050px) {
+  .render {
+    gap: 10vh;
+  }
+}

@@ -1,13 +1,38 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Unica+One&display=swap");
+
+@font-face {
+  font-family: Imported-Regular;
+  src: url("./font/ClashDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: Imported-Bold;
+  src: url("./font/ClashDisplay-Bold.ttf");
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  transition: all ease-in 400ms;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #150e28;
+  overflow-x: hidden;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-size: 14px;
+}
+.error {
+  color: tomato;
 }

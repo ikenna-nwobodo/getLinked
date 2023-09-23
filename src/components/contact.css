@@ -1,0 +1,131 @@
+.ctx {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.contact-page {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+.contact-info {
+  display: grid;
+  gap: 1rem;
+}
+.social-links > div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.contact-form {
+  padding: 3rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.contact-form .form {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.contact-form .form h2,
+.contact-form .form p {
+  width: 100%;
+}
+.contact-form .form > div {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+.contact-form .form input,
+.contact-form .form textarea {
+  padding: 0.7rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  resize: none;
+  background-color: transparent;
+  color: white;
+}
+.contact-form .form input:focus,
+.contact-form .form textarea:focus {
+  border: 1px solid white;
+}
+.contact-form .form button.btn-a {
+  width: 50%;
+}
+.contact-form .social-links,
+.cont,
+.back {
+  display: none;
+}
+small.error {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.2rem;
+  font-size: 12px;
+  transition: 1s;
+}
+small.error span {
+  color: tomato !important;
+  font-size: 12px;
+}
+@media screen and (max-width: 900px) {
+  .contact-page {
+    width: 100%;
+    padding: 0rem;
+  }
+  .contact-info {
+    display: none;
+  }
+  .contact-form {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+  }
+  .contact-form .social-links,
+  .cont {
+    display: grid;
+    gap: 0.3rem;
+  }
+  .cont.pls {
+    margin-bottom: 1rem;
+  }
+  .form h2 {
+    font-size: 4vw;
+  }
+  .form p {
+    font-size: 3vw;
+  }
+  .back {
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+  .back div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    cursor: pointer;
+    border: 2px solid purple;
+  }
+  .back div span {
+    color: white !important;
+    width: min-content;
+    font-size: 13px;
+  }
+}

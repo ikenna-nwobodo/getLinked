@@ -1,0 +1,30 @@
+button.btn-a {
+  background: rgb(254, 52, 185);
+  background: linear-gradient(
+    80deg,
+    rgba(254, 52, 185, 1) 0%,
+    rgba(144, 58, 255, 1) 100%
+  );
+  padding: 1rem 1.5rem;
+  border-radius: 0.3rem;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all ease-in 200ms;
+}
+button.btn-a:hover {
+  background: rgb(254, 52, 185);
+  background: linear-gradient(
+    70deg,
+    rgba(254, 52, 185, 1) 50%,
+    rgba(144, 58, 255, 1) 100%
+  );
+  transition: all ease-in 200ms;
+  transform: scale(95%);
+}

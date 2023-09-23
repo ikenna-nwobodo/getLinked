@@ -1,0 +1,91 @@
+.policy {
+  width: 80%;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 4fr 4fr;
+  place-items: center;
+}
+.policy-text {
+  display: grid;
+  gap: 2rem;
+}
+.policy-text .title {
+  display: grid;
+  gap: 1rem;
+}
+.policy-text .title .head {
+  display: grid;
+  gap: 1rem;
+}
+.policy-text .title h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.policy-text .title span {
+  color: #d434fe;
+}
+.policy-text .title .head small {
+  display: grey !important;
+  font-size: 1.8vw;
+}
+.policy-text .content {
+  border: 1px solid #d434fe;
+  border-radius: 0.3rem;
+  padding: 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.policy-text .content .licensing h2 span {
+  color: #d434fe;
+}
+.policy-text .content .licensing {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.licensing .top {
+  width: 100%;
+}
+.policy-text .content .licensing h2 {
+  font-size: 15px;
+}
+.term {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.term span {
+  display: grid;
+  place-items: center;
+  height: 12px;
+  width: 12px;
+  border-radius: 59%;
+  background-color: #2de100;
+  font-size: 12px;
+}
+.licensing button.btn-a {
+  width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .policy {
+    width: 90%;
+    height: max-content;
+    grid-template-columns: none;
+  }
+  .policy-text .title {
+    place-items: center;
+    text-align: center;
+  }
+  .policy-text .title h1 {
+    font-size: 4vw;
+  }
+  .policy-text .content {
+    padding: 1.6rem;
+  }
+  .policy-text .content p.po {
+    text-align: center;
+  }
+  .policy-text {
+    place-items: center;
+  }
+}

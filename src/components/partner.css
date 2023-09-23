@@ -1,0 +1,31 @@
+.partners {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.partners .head {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.partners .head p {
+  font-size: clamp(3vw, 5em);
+  width: 70%;
+  text-align: center;
+  line-height: 1.4rem;
+}
+@media screen and (max-width: 900px) {
+  .partners {
+    height: max-content;
+  }
+  .partners .head h1 {
+    font-size: 4vw;
+  }
+  .partners .head p {
+    font-size: 2.5vw;
+  }
+}

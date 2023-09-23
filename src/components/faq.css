@@ -1,0 +1,69 @@
+:root {
+  --max-height: inherit;
+}
+.faqs {
+  width: 70%;
+  display: grid;
+  height: 100vh;
+  gap: 2rem;
+  grid-template-columns: 4fr 3fr;
+  place-items: center;
+}
+
+.faqs-text {
+  display: grid;
+  gap: 2rem;
+}
+.faqs-text .title {
+  display: grid;
+  gap: 1rem;
+}
+.faqs-text .title h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.faqs-text .title p {
+  line-height: 1.5rem;
+}
+.faqs-text .title span {
+  color: #d434fe;
+}
+.faqs-text .content .faq-list {
+  display: grid;
+  gap: 1rem;
+}
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.3rem 0.3rem 0.6rem;
+  border-bottom: 1px solid #d434fe;
+}
+.faq span {
+  color: #d434fe;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .faqs {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: calc(var(--max-height) + 3vh);
+  }
+  .faqs-text {
+    text-align: center;
+  }
+  .faqs-text .title h1 {
+    font-size: 4vw;
+  }
+  .faqs-text .content {
+    display: grid;
+    place-items: center;
+  }
+  .faqs-text .content p {
+    font-size: 2.5vw;
+  }
+}

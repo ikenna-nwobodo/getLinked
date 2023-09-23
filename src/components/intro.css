@@ -1,0 +1,46 @@
+.intro {
+  width: 80%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  place-items: center;
+}
+.intro-img {
+  padding: 1rem;
+}
+.intro-text {
+  display: grid;
+  gap: 1rem;
+}
+.intro-text .title h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.intro-text .title span {
+  color: #d434fe;
+}
+.intro-text .content p {
+  line-height: 1.8rem;
+  width: 90%;
+}
+@media screen and (max-width: 900px) {
+  .intro {
+    width: 90%;
+    height: 75vh;
+    grid-template-columns: none;
+  }
+  .intro-text {
+    text-align: center;
+  }
+  .intro-text .title h1 {
+    font-size: 4vw;
+  }
+  .intro-text .content {
+    display: grid;
+    place-items: center;
+  }
+  .intro-text .content p {
+    line-height: 1.4rem;
+    font-size: 2.5vw;
+  }
+}

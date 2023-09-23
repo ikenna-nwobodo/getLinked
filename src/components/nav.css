@@ -1,0 +1,95 @@
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  color: white;
+}
+.logo span {
+  color: #d434fe;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.349);
+  padding: 1rem 5rem;
+}
+header div,
+nav {
+  display: flex;
+  align-items: center;
+}
+nav {
+  width: 50%;
+  justify-content: space-evenly;
+}
+header .nav-btn {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+.nav-link {
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0.7rem;
+  border-bottom: 1px solid transparent;
+}
+.nav-link:hover {
+  border-bottom: 1px solid #d434fe;
+  transform: translateY(-10%);
+}
+.contct a.active {
+  background-image: linear-gradient(
+    80deg,
+    rgba(254, 52, 185, 1) 0%,
+    rgba(144, 58, 255, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1050px) {
+  .logo {
+    flex: 1;
+    background-color: transparent;
+    font-size: 3vw !important ;
+  }
+  header {
+    z-index: 100;
+    padding: 1rem;
+    height: 20px;
+    margin-bottom: 2rem;
+  }
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  header nav {
+    z-index: 100;
+    position: absolute;
+    top: -100vh;
+    right: 0;
+    width: max-content;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: max-content;
+    background-color: #150e28;
+    border-bottom-left-radius: 2rem;
+    transition: 1s;
+  }
+  header .responsive {
+    transform: translateY(100vh);
+  }
+  nav .close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}

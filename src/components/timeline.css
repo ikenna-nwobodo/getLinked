@@ -1,0 +1,20 @@
+.timeline {
+  height: max-content;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  width: 90%;
+}
+.timeline h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.timeline h1,
+.timeline p {
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .timeline h1 {
+    font-size: 4vw;
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --max-height: inherit;
+}
+.rules {
+  width: 80%;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 4fr 3fr;
+  place-items: center;
+}
+
+.rules-text {
+  display: grid;
+  gap: 1rem;
+}
+.rules-text .title h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.rules-text .title span {
+  color: #d434fe;
+}
+.rules-text .content p {
+  line-height: 1.8rem;
+  width: 90%;
+}
+
+@media screen and (max-width: 900px) {
+  .rules {
+    width: 90%;
+    grid-template-columns: none;
+    display: flex;
+    height: 100vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .rules-text {
+    text-align: center;
+  }
+  .rules-text .title h1 {
+    font-size: 4vw;
+  }
+  .rules-text .content {
+    display: grid;
+    place-items: center;
+  }
+  .rules-text .content p {
+    line-height: 1.4rem;
+    font-size: 2.5vw;
+  }
+}
