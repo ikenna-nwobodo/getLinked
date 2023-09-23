@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./contact.css";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Contact = () => {
   const url = "https://backend.getlinked.ai/hackathon/contact-form";
@@ -11,10 +11,21 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [width, setwidth] = useState(window.innerWidth);
+  const [isLoading, setLoading] = useState(false);
+  const [isdone, setDone] = useState(false);
+  const breakpoint = 1050;
+  const navigate = useNavigate();
   const handleInput = (e) => {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
     setData(newData);
+  };
+  const done = () => {
+    setDone(true);
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,23 +44,56 @@ const Contact = () => {
 
     setErrors(validationerrors);
     if (Object.keys(validationerrors).length === 0) {
+      setLoading(true);
       axios
         .post(url, {
           first_name: data.name,
           email: data.mail,
           message: data.message,
         })
-        .then((res) => {})
+        .then((res) => {
+          setLoading(false);
+          done();
+          setData({
+            name: "",
+            mail: "",
+            message: "",
+          });
+        })
         .catch((err) => console.log(err));
-      setData({
-        name: "",
-        mail: "",
-        message: "",
-      });
     }
   };
+  useEffect(() => {
+    const handleWindowResize = () => setwidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
   return (
     <div className="ctx">
+      {isdone && (
+        <div className="modal">
+          <div className="modal-content">
+            <img
+              src={require("../images/donet.png")}
+              alt=""
+              height={width > breakpoint ? 400 : 200}
+            />
+            <h2>Done</h2>
+            <p>Redirecting...</p>
+          </div>
+        </div>
+      )}
+      {isLoading && (
+        <div className="modal">
+          <div className="modal-content">
+            <img
+              src={require("../images/giphy-unscreen.gif")}
+              alt=""
+              height={width > breakpoint ? 400 : 200}
+            />
+          </div>
+        </div>
+      )}
       <div className="back">
         <div>
           <Link to="/">

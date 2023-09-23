@@ -6,9 +6,9 @@ import axios from "axios";
 const Register = () => {
   const [width, setwidth] = useState(window.innerWidth);
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState(0);
   const [modal, setModal] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isLoading, setLoading] = useState(false);
   const breakpoint = 1050;
   const [data, setData] = useState({
     team_name: "",
@@ -22,16 +22,13 @@ const Register = () => {
   const toggleModal = () => {
     setModal(true);
   };
-  const hcat = (e) => {
-    setCategory(e.target.value);
-  };
   const handleInput = (e) => {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
     newData.policy_accepted =
       document.getElementById("policy_accepted").checked;
-    newData.category = category;
     setData(newData);
+    console.log(data);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -58,10 +55,11 @@ const Register = () => {
     if (!/^[0-9]+$/.test(data.size)) {
       validationerrors.size = "Please enter only numbers";
     }
-
+    console.log(data);
     setErrors(validationerrors);
 
     if (Object.keys(validationerrors).length === 0) {
+      setLoading(true);
       const registerUrl = "https://backend.getlinked.ai/hackathon/registration";
       axios
         .post(registerUrl, {
@@ -74,6 +72,7 @@ const Register = () => {
           privacy_poclicy_accepted: data.policy_accepted,
         })
         .then((res) => {
+          setErrors(false);
           toggleModal();
           setData({
             team_name: "",
@@ -85,7 +84,16 @@ const Register = () => {
             policy_accepted: false,
           });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err.response.data);
+          var errors = err.response.data;
+          for (const key in errors) {
+            var mailerr = errors[key];
+            validationerrors.mail = mailerr[0];
+            console.log(validationerrors);
+            setErrors(validationerrors);
+          }
+        });
     }
   };
   useEffect(() => {
@@ -104,6 +112,17 @@ const Register = () => {
   const checkRef = useRef();
   return (
     <div className="ctx">
+      {isLoading && (
+        <div className="modal">
+          <div className="modal-content">
+            <img
+              src={require("../images/giphy-unscreen.gif")}
+              alt=""
+              height={width > breakpoint ? 400 : 200}
+            />
+          </div>
+        </div>
+      )}
       {modal && (
         <div className="modal">
           <div className="modal-content">
@@ -221,7 +240,11 @@ const Register = () => {
                       {errors.category}
                     </small>
                   )}
-                  <select defaultValue="default" onChange={(e) => hcat(e)}>
+                  <select
+                    defaultValue="default"
+                    onChange={(e) => handleInput(e)}
+                    id="category"
+                  >
                     <option value="default" disabled>
                       Select
                     </option>
@@ -248,6 +271,7 @@ const Register = () => {
                     id="size"
                     type="text"
                     onChange={(e) => handleInput(e)}
+                    placeholder="Size"
                     value={data.size}
                   />
                 </div>
