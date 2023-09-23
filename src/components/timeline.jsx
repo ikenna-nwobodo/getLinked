@@ -23,7 +23,7 @@ const Timeline = () => {
       <img
         src={width > breakpoint ? src : srct}
         alt=""
-        height={width > breakpoint ? 900 : 800}
+        height={width > breakpoint ? 900 : 900}
       />
     </div>
   );
