@@ -1,7 +1,6 @@
 import "./timeline.css";
 import { useEffect, useState } from "react";
 import src from "../images/timeline-desktop.png";
-import srct from "../images/timeline-mobile.png";
 
 const Timeline = () => {
   const [width, setwidth] = useState(window.innerWidth);
